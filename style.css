@@ -1,0 +1,539 @@
+/**
+ * Description: Project CV online.
+ * Version: 1.4
+ * Last update: 11/03/2020
+ * Author: Fred <fredericaulas@gmail.com>
+ *
+ * Summary:
+ *    Introduction
+        -60 importation des polices utilisées via google fonts '@import' 
+        -62 'font family' utilisée disponible en commentaires
+        -64 style appliqué à tout le document '*'
+        -72 style appliqué au corps du site 'body'
+        -77 style appliqué au container principal
+        -81 style appliqué à tous les titres d'importance H3 du document
+
+ *    0. SECTION 1 : SIDEBAR -87
+          -95 0.1. SOUS-SECTION SIDEBAR FIGURE : IMAGE
+          -107 0.2. SOUS-SECTION TITRES SIDEBAR : H3
+          -117 0.3. SOUS-SECTION PRESENTATION: CONTACT
+          -132 0.4. SOUS-SECTION PRESENTATION : ABOUT
+          -140 0.5. SOUS-SECTION PRESENTATION : HOBBIES
+
+ *    1. SECTION 2 : MAIN-CONTENT -161
+          -170 Fontawesome
+          -177 1.1. SOUS-SECTION : TITLE
+            -184 TITRE : H1 
+            -199 TITRE : H2
+            -206 TITRE : BORDER
+          -213 1.2. SOUS-SECTION : INFORMATION FORMATION
+            -216 Fontawesome
+            -223 TITRE : H4 H5
+            -238 TITRE : RESUME-TITLE
+            -264 TITRE : LISTE UL
+            -275 CONTAINER FORMATION
+          -297 1.3. SOUS-SECTION : SKILLS
+
+ *    RESPONSIVE : -324
+        -327 SMARTPHONES ( @media max width 576px )
+            -334 0. SECTION 2 : MAIN-CONTENT
+                -337 0.1. SOUS-SECTION : TITLE
+                    -344 H1 
+                -351 0.2. SOUS-SECTION : INFORMATION FORMATION
+                    -354 RESUME-TITLE
+                    -369 CONTAINER FORMATION
+                    -404 FONT AWESOME
+                -416 0.3. SOUS-SECTION : SKILLS
+                    -446 H3 sous-section skills / information-formation
+            -454 1. SECTION 1 : SIDEBAR
+                -467 1.1. SOUS-SECTION PRESENTATION: CONTACT
+                -473 1.2. SOUS-SECTION PRESENTATION: ABOUT
+
+        -482 TABLETTES ( @media min-width 576px / max-width 992px ) 
+            -489 0. SECTION 1 : SIDEBAR
+                -492 0.1. SOUS-SECTION PRESENTATION
+                -499 0.2. SOUS-SECTION PRESENTATION : CONTACT
+                -516 0.3. SOUS-SECTION PRESENTATION : ABOUT
+                -528 0.3. SOUS-SECTION PRESENTATION : SKILLS
+ */
+ 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+
+/* font-family: 'Open Sans', ;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-size: 14px;
+    color: #555555;
+}
+
+main {
+    display: flex;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+/* ==========================================================================
+   0. SECTION 1 : SIDEBAR
+   ========================================================================== */
+
+.sidebar {
+    flex: 1;
+    background: #e8cb60;
+}
+
+/* 0.1. SOUS-SECTION SIDEBAR FIGURE : IMAGE
+   ========================================================================== */
+
+.sidebar figure {
+    display: flex;
+}
+
+.sidebar figure img {
+    border-radius: 200px;
+    margin: 40px auto;
+}
+
+/* 0.2. SOUS-SECTION TITRES SIDEBAR : H3
+   ========================================================================== */
+
+.presentation h3 {
+    color: #e8cb60;
+    background:  #404040;
+    text-align: center;
+    padding: 7px 0px;
+}
+
+/* 0.3. SOUS-SECTION PRESENTATION: CONTACT
+   ========================================================================== */
+
+.contact ul {
+    padding: 20px 0 20px 27px;
+}
+
+.contact ul li {
+    margin: 15px;
+}
+
+.contact ul li span {
+    display: block;
+}
+
+/* 0.4. SOUS-SECTION PRESENTATION : ABOUT
+   ========================================================================== */
+
+.about p {
+    padding: 30px 40px 480px 40px;
+    text-align: justify;
+}
+
+/* 0.5. SOUS-SECTION PRESENTATION : HOBBIES
+   ========================================================================== */
+
+.hobbies ul {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.hobbies ul li {
+    margin: 10px;
+}
+
+.hobbies ul li i {
+    border: 3px solid #555;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 2.5em;
+}
+
+/* ==========================================================================
+   1.  SECTION 2 : MAIN-CONTENT
+   ========================================================================== */
+
+.main-content {
+    background: #fff;
+    padding: 100px 31px 60px 40px;
+    flex: 2;
+}
+
+    /* FONTAWESOME */
+
+.main-content i {
+    color: #e8cb60;
+    margin-right: 15px;
+}
+
+/* 1.1. SOUS-SECTION : TITLE
+   ========================================================================== */
+
+.title {
+    margin-bottom: 100px;
+}
+
+   /* TITRE : H1 */
+
+h1 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 4em;
+    color: #000000;
+}
+
+h1 span {
+    color: #e8cb60;
+    padding-right: 10px;
+    font-weight: 400;
+}
+
+    /* TITRE : H2 */
+
+h2 {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+    /* TITRE : BORDURE */
+
+.border {
+    border-bottom: 2px #e8cb60 solid;
+    width: 65px;
+}
+
+/* 1.2. SOUS-SECTION : INFORMATION FORMATION
+   ========================================================================== */
+
+    /* FONTAWESOME */
+
+.circle {
+    font-size: 0.7em;
+    padding-top: 3px;
+}
+
+    /* TITRES : H4 H5 */
+
+h4 {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+    /* TITRE : RESUME-TITLE */
+
+.resume-title {
+    border-bottom: 2px #e8cb60 solid;
+    margin-bottom: 35px;
+}
+
+.resume-title h3 {
+    display: inline-block;
+    font-weight: 400;
+    margin-top: 30px;
+    font-size: 2em;
+    color: #000000;
+    margin-left: 15px;
+}
+
+.resume-title h3 span{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.resume-title i {
+    font-size: 3em;
+    padding-bottom: 10px;
+}
+
+    /* TITRE : LISTE UL */
+
+.information {
+    margin-bottom: 15px;
+}
+
+.information li {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+    /* CONTAINER FORMATION */
+
+.container {
+    display: flex;
+}
+
+.date {
+  flex: 1;
+}
+
+.details {
+  flex: 4;
+}
+
+.date p {
+    font-weight: 400;
+}
+
+.date p span { 
+    display: block;
+}
+
+/* 1.3. SOUS-SECTION : SKILLS
+   ========================================================================== */
+
+.skills-name {
+    display: flex;
+}
+
+.graphism {
+    flex: 1;
+}
+
+h6 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.skills-name p {
+    font-weight: 400;
+}
+
+.skills-name span {
+    font-weight: 300;
+}
+
+/*
+ * RESPONSIVE
+ */
+
+@media only screen and (max-width: 576px) {    
+
+    main {
+        flex-direction: column-reverse;
+    }
+
+    /* ==========================================================================
+   0. SECTION 2 : MAIN-CONTENT
+   ========================================================================== */
+
+   /* 0.1. SOUS-SECTION : TITLE
+   ========================================================================== */
+
+   .title {
+        margin-bottom: 70px;
+   }   
+   
+   /* H1 */
+   
+   h1 span {
+        display: block;
+        margin-bottom: -25px;
+    }
+
+    /* 0.2. SOUS-SECTION : INFORMATION FORMATION
+   ========================================================================== */
+
+    /* RESUME-TITLE */
+
+    .resume-title {
+        display: flex;
+    }
+
+    .resume-title i {
+        font-size: 2em;
+        padding-top: 32px;
+    }
+
+    .resume-title h3 span {
+        font-size: 0.9em;
+    }
+
+    /* CONTAINER FORMATION */
+
+    .container {
+        display: block;
+    }
+
+    .information ul li {
+        display: block;
+    }
+
+    h4 {
+        font-weight: 600;
+    }
+
+    .date {
+        width: 30%;
+        float: right;
+        display: flex;
+        font-weight: 700;
+        font-size: 0.9em;
+    }
+
+    .date p{
+        font-weight: 900;
+    }
+
+    .details p {
+        font-size: 1.2em;
+    }
+
+    .details span {
+        display: block;
+        margin-left: 25px
+    }
+
+    /* FONT AWESOME */
+
+    .bullseye i {
+        margin: 5px 10px 0 0;
+        float: inline-start;
+    }
+
+    .circle i {
+        margin: 10px 10px 0 0;
+        float: inline-start;
+    }
+
+    /* 0.3. SOUS-SECTION : SKILLS
+   ========================================================================== */
+
+    .skills-name {
+        display: block;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    
+    .graphism {
+        margin-bottom: 30px;
+        margin-top: -20px;
+    }
+    
+    h6 {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .skills-name p {
+        font-size: 1.2em;
+        padding-bottom: 4px;
+    }
+
+    .skills-name p span {
+        margin: 95px;
+        border-left: #e8cb60 solid 5px;
+        padding-left: 10px;
+    }
+
+    /* H3 sous-section skills / information-formation */
+
+    .skills .name h3,
+    .formation .name h3{
+        padding-top: 22px;
+    }
+
+    /* ==========================================================================
+   1. SECTION 1 : SIDEBAR
+   ========================================================================== */
+
+   /* 1.1. SOUS-SECTION PRESENTATION: CONTACT
+   ========================================================================== */
+
+   .contact ul li {
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.4em;
+        margin-right: 44px;
+   }
+
+   .contact ul li span {
+        font-weight: 600;
+        font-size: 1.2em;
+        padding-bottom: 3px;
+   }
+
+   /* 1.2. SOUS-SECTION PRESENTATION: ABOUT
+   ========================================================================== */
+
+   .about p {
+        padding: 20px 20px;
+   }
+   
+}
+
+@media only screen and  (min-width: 576px) and (max-width: 992px) {
+
+    main {
+        flex-direction: column-reverse;
+    }
+
+    /* ==========================================================================
+   0. SECTION 1 : SIDEBAR
+   ========================================================================== */
+
+   /* 0.1. SOUS-SECTION PRESENTATION
+   ========================================================================== */
+
+    .presentation {
+        display: flex;   
+    }
+
+    /* 0.2. SOUS-SECTION PRESENTATION: CONTACT
+   ========================================================================== */
+
+    .contact ul li {
+        font-weight: 300;
+        margin: auto;
+    }
+
+    .contact ul li span {
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    .contact {
+        flex: 1;
+    }
+
+    /* 0.3. SOUS-SECTION PRESENTATION: ABOUT
+   ========================================================================== */
+
+    .about {
+        flex: 3;
+    }
+
+    .about p { 
+        padding-bottom: 27px;
+        font-size: 1.1em;
+    }
+
+    /* 0.4. SOUS-SECTION : SKILLS
+   ========================================================================== */
+
+    .hobbies {
+        flex: 1;
+    }
+
+    .hobbies ul{
+        flex-wrap: wrap;
+    }
+}
+    
